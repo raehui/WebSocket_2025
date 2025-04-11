@@ -282,7 +282,7 @@ function App3() {
                       {
                         item.isImage ?
                           <img src={item.content}
-                            style={{ maxWidth: "200px", borderRadius: "10px", cursor:"pointer" }}
+                            style={{ maxWidth: "200px", borderRadius: "5px", cursor:"pointer" }}
                             alt="업로드된 이미지" 
                             onClick={()=>setModalImageUrl(item.content)}
                             />
