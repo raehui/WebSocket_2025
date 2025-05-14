@@ -36,7 +36,7 @@ function App3() {
   }
 
   // useWebSocket() hook 사용해서 웹소켓 연결하기 
-  const {sendMessage, connected} = useWebSocket("ws://192.168.0.107:9000/ws", {
+  const {sendMessage, connected} = useWebSocket("ws://localhost:9000/ws", {
     onOpen:()=>{
       console.log("연결됨!");
     },
@@ -156,15 +156,16 @@ function App3() {
   //내가 보낸 메세지 timeStampStyle
   const myTimeStampStyle:React.CSSProperties = {
     ...timeStampStyle,
+    border:"red dotted",
     left:"-100px",
     textAlign:"right"
   }
   //남이 보낸 메세지 timeStampStyle
   const otherTimeStampStyle:React.CSSProperties = {
     ...timeStampStyle,
+    border:"red dotted",
     right:"-100px"
   }
-
 
   //내가 보낸 메세지 스타일 
   const myBubbleStyle: React.CSSProperties = {
